@@ -341,7 +341,7 @@
     border-right:1px solid var(--amber-soft);
   }
   .panel .tag{font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--amber);}
-  .panel h3{font-size:19px; margin-top:12px; line-height:1.25;}
+  .panel h3{font-size:19px; margin-top:12px; line-height:1.25; overflow-wrap:anywhere;}
   .panel .desc{color:var(--muted); font-size:14px; margin-top:10px;}
   .panel .metrics{display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:18px; padding-top:16px; border-top:1px dashed var(--line-strong);}
   .metric{font-family:'IBM Plex Mono', monospace;}
@@ -378,7 +378,7 @@
     border-radius:var(--radius);
   }
   .row:hover{background:var(--panel);}
-  .row .name{font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:15.5px;}
+  .row .name{font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:15.5px; overflow-wrap:anywhere;}
   .row .desc{color:var(--muted); font-size:13.5px;}
   .row .tools{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--muted-2); text-align:right;}
   .row .row-link{
@@ -728,7 +728,7 @@
         <span class="eyebrow">The work</span>
         <h2>Featured builds</h2>
       </div>
-      <div class="section-note">Visualization and BI first — then the cloud pipelines, forecasting models, applied ML, and AI research behind them.</div>
+      <div class="section-note">Repository-backed projects first — spanning applied AI, cloud data engineering, business intelligence, forecasting, visualization, and machine learning.</div>
     </div>
 
     <div class="explore" id="explore">
@@ -743,87 +743,10 @@
 
     <div class="panels" id="panelGrid">
 
-      <div class="panel reveal" data-cat="viz">
-        <span class="tag">Network Analytics</span>
-        <h3>fifa-global-talent-analytics</h3>
-        <p class="desc">Merged six FIFA seasons into one longitudinal dataset and modeled nationality → position → club as a network to find recruitment hubs and structural outliers.</p>
-        <div class="metrics">
-          <div class="metric"><span class="num">6 seasons</span><span class="lbl">Merged &amp; aligned</span></div>
-          <div class="metric"><span class="num">−78→+188%</span><span class="lbl">Post-2020 value swing</span></div>
-          <div class="metric"><span class="num">4 nations</span><span class="lbl">Dominate talent rank</span></div>
-        </div>
-        <div class="stack"><span>Python</span><span>Network science</span><span>K-Means / LOF</span><span>Tableau</span><span>JS chord diagrams</span></div>
-        <a class="repo-link" href="https://github.com/TriptiSingh-Developer/Tableau---Global-Football-Talent-Flows-FIFA-2017-2022-" target="_blank" rel="noopener">View repo on GitHub</a>
-      </div>
-
-      <div class="panel reveal" data-cat="viz">
-        <span class="tag">BI &amp; Public Sector</span>
-        <h3>National Health Mission Budget &amp; Fund Forecasting</h3>
-        <p class="desc">Unified multi-year fund data across 51 districts and 13+ blocks into one Power BI reporting layer, then forecast allocations to catch budget gaps before they happened.</p>
-        <div class="metrics">
-          <div class="metric"><span class="num">51</span><span class="lbl">Districts unified</span></div>
-          <div class="metric"><span class="num">-13%</span><span class="lbl">RMSE vs. linear baseline</span></div>
-          <div class="metric"><span class="num">₹B+</span><span class="lbl">Fund flow tracked</span></div>
-        </div>
-        <div class="stack"><span>Power BI</span><span>Python</span><span>Random Forest</span><span>LSTM</span></div>
-        <a class="repo-link" href="https://github.com/TriptiSingh-Developer/Budget-Management-Project" target="_blank" rel="noopener">View repo on GitHub</a>
-      </div>
-
-      <div class="panel reveal" data-cat="cloud">
-        <span class="tag">Solo Research · Cloud Architecture</span>
-        <h3>Serverless Lakehouse-Style vs. Data Warehouse on AWS</h3>
-        <p class="desc">Controlled benchmark of Amazon Athena (lakehouse-style: S3 + Glue + Parquet) against Amazon Redshift across three query-complexity tiers, with a formal cost model correcting for Athena's 10 MB per-query billing minimum — the naive scan-only reading overstates Athena's advantage by ~3 orders of magnitude.</p>
-        <div class="metrics">
-          <div class="metric"><span class="num">0.64–0.75s</span><span class="lbl">Athena query time</span></div>
-          <div class="metric"><span class="num">15.4×</span><span class="lbl">Redshift Q1→Q3 slowdown</span></div>
-          <div class="metric"><span class="num">$1.98</span><span class="lbl">Total project cost</span></div>
-        </div>
-        <div class="stack"><span>S3 / Parquet</span><span>AWS Glue</span><span>Athena</span><span>Redshift</span><span>EC2 / Python</span><span>CloudWatch</span><span>Tableau</span></div>
-        <a class="repo-link" href="https://github.com/TriptiSingh-Developer/Big-Data-and-Cloud-Computing---AWS" target="_blank" rel="noopener">View repo on GitHub</a>
-      </div>
-
-      <div class="panel reveal" data-cat="forecast">
-        <span class="tag">Time Series</span>
-        <h3>Economic Forecasting Pipelines in R</h3>
-        <p class="desc">Production-style forecasting across tourism, GDP, and household wealth series using the fpp3 ecosystem — with real train-test backtesting, not just a fitted line.</p>
-        <div class="metrics">
-          <div class="metric"><span class="num">5 models</span><span class="lbl">Benchmarked</span></div>
-          <div class="metric"><span class="num">Rolling</span><span class="lbl">Origin validation</span></div>
-          <div class="metric"><span class="num">RMSE·MAE</span><span class="lbl">·MAPE scored</span></div>
-        </div>
-        <div class="stack"><span>R</span><span>fpp3</span><span>tsibble</span><span>ETS / TSLM</span></div>
-        <a class="repo-link" href="https://github.com/TriptiSingh-Developer/Time-Series" target="_blank" rel="noopener">View repo on GitHub</a>
-      </div>
-
-      <div class="panel reveal" data-cat="ml">
-        <span class="tag">Machine Learning</span>
-        <h3>DineSafe Inspection Risk Prediction</h3>
-        <p class="desc">Multiclass model over hundreds of thousands of Toronto food-safety inspections, predicting violation severity so inspectors can prioritize the riskiest sites first.</p>
-        <div class="metrics">
-          <div class="metric"><span class="num">98%</span><span class="lbl">Accuracy (XGBoost)</span></div>
-          <div class="metric"><span class="num">0.96</span><span class="lbl">Macro F1</span></div>
-          <div class="metric"><span class="num">88.4%</span><span class="lbl">Recall on rare class</span></div>
-        </div>
-        <div class="stack"><span>Python</span><span>XGBoost</span><span>Scikit-learn</span><span>LOF outliers</span></div>
-        <a class="repo-link" href="https://github.com/TriptiSingh-Developer/Data-Mining" target="_blank" rel="noopener">View repo on GitHub</a>
-      </div>
-
       <div class="panel reveal" data-cat="ai">
-        <span class="tag">Research Accepted for Presentation · IEEE Cyber-AI 2026</span>
-        <h3>AI-Powered Cybersecurity in Big Data Environments</h3>
-        <p class="desc">Designed a 5-layer streaming architecture — Kafka → Flink → Feature Store → MLflow → SOAR — and a hybrid Rule + LSTM intrusion detection model, accepted for publication at IEEE Cyber-AI 2026.</p>
-        <div class="metrics">
-          <div class="metric"><span class="num">99.3%</span><span class="lbl">Detection rate</span></div>
-          <div class="metric"><span class="num">0.38%</span><span class="lbl">False alarm rate</span></div>
-          <div class="metric"><span class="num">0.999</span><span class="lbl">AUC</span></div>
-        </div>
-        <div class="stack"><span>Kafka</span><span>Flink</span><span>MLflow</span><span>LSTM</span><span>SOAR</span></div>
-      </div>
-
-      <div class="panel reveal" data-cat="ai">
-        <span class="tag">AI / LLM · Team of 6, Rutgers</span>
-        <h3>Retrieval-Augmented Assistant for Insurance Policies</h3>
-        <p class="desc">Built a hybrid BM25 + ChromaDB RAG pipeline (LangChain, LLaMA 3.3-70B via Groq) over 45 health-insurance policy PDFs, letting members ask plain-language questions and get answers traced back to source text.</p>
+        <span class="tag">Applied AI / LLM · Rutgers Team Project</span>
+        <h3>Insurance-RAG-Assistant</h3>
+        <p class="desc">Built a hybrid BM25 + ChromaDB retrieval pipeline over 45 health-insurance policy PDFs, using LangChain and LLaMA 3.3-70B through Groq to return plain-language answers with source-grounded citations.</p>
         <div class="metrics">
           <div class="metric"><span class="num">68%</span><span class="lbl">Answer accuracy</span></div>
           <div class="metric"><span class="num">93%</span><span class="lbl">Citation quality</span></div>
@@ -833,18 +756,99 @@
         <a class="repo-link" href="https://github.com/TriptiSingh-Developer/Insurance-RAG-Assistant" target="_blank" rel="noopener">View repo on GitHub</a>
       </div>
 
-      <div class="panel reveal" data-cat="ai">
-        <span class="tag">Solo Research · Healthcare AI</span>
-        <h3>From Surveillance to Support: EHR Burnout Early-Warning Framework</h3>
-        <p class="desc">Designed a governance-centered analytics framework that models clinician burnout risk from passive EHR behavioral signals — after-hours charting, message load, session patterns — and ran the full pipeline end-to-end on a synthetic 1,000-clinician, 52-week cohort to prove technical feasibility.</p>
+      <div class="panel reveal" data-cat="cloud">
+        <span class="tag">Cloud Data Engineering · AWS</span>
+        <h3>aws-lakehouse-vs-warehouse</h3>
+        <p class="desc">Implemented a controlled batch-analytics comparison between Amazon Athena over Parquet in S3 and a provisioned Amazon Redshift warehouse, keeping source data, preprocessing logic, and analytical queries consistent.</p>
+        <div class="metrics">
+          <div class="metric"><span class="num">2</span><span class="lbl">Architectures compared</span></div>
+          <div class="metric"><span class="num">4</span><span class="lbl">S3 data zones</span></div>
+          <div class="metric"><span class="num">8</span><span class="lbl">AWS services used</span></div>
+        </div>
+        <div class="stack"><span>S3 / Parquet</span><span>EC2 / Python</span><span>AWS Glue</span><span>Athena</span><span>Redshift</span><span>CloudWatch</span><span>IAM</span><span>Tableau</span></div>
+        <a class="repo-link" href="https://github.com/TriptiSingh-Developer/aws-lakehouse-vs-warehouse" target="_blank" rel="noopener">View repo on GitHub</a>
+      </div>
+
+      <div class="panel reveal" data-cat="viz forecast ml">
+        <span class="tag">Business Intelligence · Public-Sector Analytics</span>
+        <h3>budget-management-dashboard-and-forecasting</h3>
+        <p class="desc">Combined a multi-page Power BI budget dashboard with Python forecasting of quarterly fund disbursement. The model supports district, program, activity, year, and quarter analysis and compares Random Forest, Linear Regression, and LSTM workflows.</p>
+        <div class="metrics">
+          <div class="metric"><span class="num">8,568</span><span class="lbl">Dataset rows</span></div>
+          <div class="metric"><span class="num">146.26</span><span class="lbl">Random Forest RMSE</span></div>
+          <div class="metric"><span class="num">12 qtrs</span><span class="lbl">LSTM demonstration</span></div>
+        </div>
+        <div class="stack"><span>Power BI</span><span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>TensorFlow / Keras</span><span>LSTM</span></div>
+        <a class="repo-link" href="https://github.com/TriptiSingh-Developer/budget-management-dashboard-and-forecasting" target="_blank" rel="noopener">View repo on GitHub</a>
+      </div>
+
+      <div class="panel reveal" data-cat="viz ml">
+        <span class="tag">Network Analytics · Tableau</span>
+        <h3>fifa-global-talent-analytics</h3>
+        <p class="desc">Merged six FIFA seasons into one longitudinal dataset and modeled nationality → position → club relationships to identify recruitment hubs, player-value shifts, clusters, and structural outliers.</p>
+        <div class="metrics">
+          <div class="metric"><span class="num">6 seasons</span><span class="lbl">Merged &amp; aligned</span></div>
+          <div class="metric"><span class="num">−78→+188%</span><span class="lbl">Post-2020 value swing</span></div>
+          <div class="metric"><span class="num">4 nations</span><span class="lbl">Lead talent ranking</span></div>
+        </div>
+        <div class="stack"><span>Python</span><span>Network analysis</span><span>K-Means</span><span>LOF</span><span>Tableau</span><span>JavaScript</span></div>
+        <a class="repo-link" href="https://github.com/TriptiSingh-Developer/fifa-global-talent-analytics" target="_blank" rel="noopener">View repo on GitHub</a>
+      </div>
+
+      <div class="panel reveal" data-cat="forecast">
+        <span class="tag">time-series-forecasting-portfolio Forecasting</span>
+        <h3>time-series-forecasting-portfolio</h3>
+        <p class="desc">Developed forecasting workflows across tourism, GDP, and household-wealth series using the fpp3 ecosystem, with train-test evaluation and model comparison rather than relying only on in-sample fit.</p>
+        <div class="metrics">
+          <div class="metric"><span class="num">5 models</span><span class="lbl">Benchmarked</span></div>
+          <div class="metric"><span class="num">Rolling</span><span class="lbl">Origin validation</span></div>
+          <div class="metric"><span class="num">RMSE·MAE</span><span class="lbl">·MAPE scored</span></div>
+        </div>
+        <div class="stack"><span>R</span><span>fpp3</span><span>tsibble</span><span>ETS</span><span>TSLM</span></div>
+        <a class="repo-link" href="https://github.com/TriptiSingh-Developer/time-series-forecasting-portfolio" target="_blank" rel="noopener">View repo on GitHub</a>
+      </div>
+
+      <div class="panel reveal" data-cat="ml">
+        <span class="tag">Machine Learning</span>
+        <h3>data-mining-and-machine-learningg</h3>
+        <p class="desc">Built a multiclass model over Toronto food-safety inspections to predict violation severity and help prioritize higher-risk establishments for review.</p>
+        <div class="metrics">
+          <div class="metric"><span class="num">98%</span><span class="lbl">Accuracy (XGBoost)</span></div>
+          <div class="metric"><span class="num">0.96</span><span class="lbl">Macro F1</span></div>
+          <div class="metric"><span class="num">88.4%</span><span class="lbl">Recall on rare class</span></div>
+        </div>
+        <div class="stack"><span>Python</span><span>XGBoost</span><span>Scikit-learn</span><span>LOF outliers</span></div>
+        <a class="repo-link" href="https://github.com/TriptiSingh-Developer/data-mining-and-machine-learningg" target="_blank" rel="noopener">View repo on GitHub</a>
+      </div>
+
+      <div class="panel reveal" data-cat="ai cloud">
+        <span class="tag">Research Accepted for Presentation · IEEE Cyber-AI 2026</span>
+        <h3>AI-Powered Cybersecurity in Big Data Environments</h3>
+        <p class="desc">Designed a five-layer streaming architecture — Kafka → Flink → Feature Store → MLflow → SOAR — and examined scalable intrusion detection, adversarial risk, governance, and real-time defense.</p>
+        <div class="metrics">
+          <div class="metric"><span class="num">5 layers</span><span class="lbl">Streaming architecture</span></div>
+          <div class="metric"><span class="num">Hybrid</span><span class="lbl">Rule + ML detection</span></div>
+          <div class="metric"><span class="num">IEEE</span><span class="lbl">Cyber-AI 2026</span></div>
+        </div>
+        <div class="stack"><span>Kafka</span><span>Flink</span><span>Feature Store</span><span>MLflow</span><span>LSTM</span><span>SOAR</span></div>
+      </div>
+
+      <div class="panel reveal" data-cat="ai ml">
+        <span class="tag">Healthcare AI Research</span>
+        <h3>EHR Burnout Early-Warning Framework</h3>
+        <p class="desc">Designed a governance-centered analytics framework that models clinician burnout risk from passive EHR behavioral signals and evaluated the concept on a synthetic 1,000-clinician, 52-week cohort.</p>
         <div class="metrics">
           <div class="metric"><span class="num">0.76</span><span class="lbl">AUROC vs. 0.60 naive</span></div>
           <div class="metric"><span class="num">r=0.975</span><span class="lbl">Unit-level correlation</span></div>
           <div class="metric"><span class="num">52K</span><span class="lbl">Clinician-weeks simulated</span></div>
         </div>
-        <div class="stack"><span>Azure Databricks (PySpark)</span><span>XGBoost</span><span>SHAP</span><span>Power BI</span><span>ADLS Gen2</span></div>
+        <div class="stack"><span>Azure Databricks</span><span>PySpark</span><span>XGBoost</span><span>SHAP</span><span>Power BI</span><span>ADLS Gen2</span></div>
       </div>
 
+    </div>
+
+    <div class="chip-row" style="margin-top:28px;">
+      <a class="chip" href="https://github.com/TriptiSingh-Developer?tab=repositories" target="_blank" rel="noopener">Browse all 12 GitHub repositories →</a>
     </div>
   </div>
 </section>
@@ -856,44 +860,44 @@
         <span class="eyebrow">More builds</span>
         <h2>Additional work</h2>
       </div>
-      <div class="section-note">Smaller builds, same habit of pairing a real technique with a real dataset.</div>
+      <div class="section-note">Supporting projects that show earlier work in distributed analytics, visualization, and data ingestion.</div>
     </div>
     <div class="rows">
       <div class="row reveal">
-        <div class="name">Crime Pattern Analysis at Scale</div>
-        <div class="desc">Distributed Hadoop/Hive pipeline over 6.2M+ U.S. crime records with dynamic year-partitioning for fast multi-million-row scans.</div>
-        <div class="tools">Hadoop · Hive · HiveQL</div>
-        <a class="row-link" href="https://github.com/TriptiSingh-Developer/Hadoop" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="name">hadoop-hive-crime-analysis</div>
+        <div class="desc">Crime Data Analysis Based On hadoop-hive-crime-analysis Technology: loaded crime records into HDFS and used Hive for structured tables, dynamic partitions, indexes, views, joins, rankings, and grouped analysis.</div>
+        <div class="tools">hadoop-hive-crime-analysis · HDFS · Hive · HiveQL</div>
+        <a class="row-link" href="https://github.com/TriptiSingh-Developer/hadoop-hive-crime-analysis" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
       <div class="row reveal">
-        <div class="name">NBA Player Social Network</div>
-        <div class="desc">Weighted teammate graph across 25 multi-team players — eigenvector centrality, PageRank, and community detection in Gephi.</div>
-        <div class="tools">Python · Gephi · ForceAtlas2</div>
+        <div class="name">Data-Analysis-and-Visualization</div>
+        <div class="desc">Collection of visualization and analytics projects covering an NBA player network, GDP and life expectancy, Titanic survival, and commute-speed patterns.</div>
+        <div class="tools">Python · Tableau · Orange · Gephi</div>
         <a class="row-link" href="https://github.com/TriptiSingh-Developer/Data-Analysis-and-Visualization" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
       <div class="row reveal">
-        <div class="name">GDP &amp; Life Expectancy, 1952–2007</div>
-        <div class="desc">Rosling-style animated view of development data, plus MDS and K-Means clustering to group countries by trajectory.</div>
-        <div class="tools">Python · Orange · Tableau</div>
-        <a class="row-link" href="https://github.com/TriptiSingh-Developer/Data-Analysis-and-Visualization" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="name">legacy-apache-flume-twitter-ingestion</div>
+        <div class="desc">Legacy Apache Flume learning project demonstrating source-channel-sink ingestion into HDFS followed by Hive external tables and views.</div>
+        <div class="tools">Apache Flume · HDFS · Hive</div>
+        <a class="row-link" href="https://github.com/TriptiSingh-Developer/legacy-apache-flume-twitter-ingestion" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
       <div class="row reveal">
-        <div class="name">Titanic Survival &amp; Demographics</div>
-        <div class="desc">Nested-proportion Tableau dashboards showing how class, gender, and age interacted to shape survival odds.</div>
-        <div class="tools">Tableau</div>
-        <a class="row-link" href="https://github.com/TriptiSingh-Developer/Data-Analysis-and-Visualization" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="name">Array_Python</div>
+        <div class="desc">Foundational Python repository containing basic array programs and programming exercises.</div>
+        <div class="tools">Python</div>
+        <a class="row-link" href="https://github.com/TriptiSingh-Developer/Array_Python" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
       <div class="row reveal">
-        <div class="name">Multi-Level Commute Speed Study</div>
-        <div class="desc">Two-year seasonality decomposition of daily commute speeds, split by weekday train vs. weekend cycling patterns.</div>
-        <div class="tools">Excel · Statistical modeling</div>
-        <a class="row-link" href="https://github.com/TriptiSingh-Developer/Data-Analysis-and-Visualization" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="name">TriptiSingh-Developer</div>
+        <div class="desc">GitHub profile README repository highlighting professional experience, technical skills, certifications, and selected projects.</div>
+        <div class="tools">Markdown · GitHub Profile README</div>
+        <a class="row-link" href="https://github.com/TriptiSingh-Developer/TriptiSingh-Developer" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
       <div class="row reveal">
-        <div class="name">Real-Time Twitter Ingestion</div>
-        <div class="desc">Apache Flume pipeline streaming live tweets into HDFS with a multi-hop, fault-tolerant agent architecture.</div>
-        <div class="tools">Apache Flume · Hadoop · Hive</div>
-        <a class="row-link" href="https://github.com/TriptiSingh-Developer/Apache-Flume" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="name">TriptiSingh-Developer.github.io</div>
+        <div class="desc">Source repository for this personal portfolio website, including project, experience, education, certification, and contact sections.</div>
+        <div class="tools">HTML · CSS · JavaScript · GitHub Pages</div>
+        <a class="row-link" href="https://github.com/TriptiSingh-Developer/TriptiSingh-Developer.github.io" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
   </div>
@@ -918,7 +922,7 @@
       </div>
       <div class="skill-cat reveal">
         <span class="tag">Cloud &amp; Data Engineering</span>
-        <ul><li>Azure (Databricks, ADF, ADLS Gen2, Synapse)</li><li>AWS (S3, Glue, Athena, Redshift)</li><li>Hadoop, Hive, Kafka, Flink</li></ul>
+        <ul><li>Azure (Databricks, ADF, ADLS Gen2, Synapse)</li><li>AWS (S3, Glue, Athena, Redshift)</li><li>hadoop-hive-crime-analysis, Hive, Kafka, Flink</li></ul>
       </div>
       <div class="skill-cat reveal">
         <span class="tag">ML, AI &amp; Statistics</span>
@@ -966,7 +970,7 @@
       </div>
       <div class="cert-card reveal">
         <div class="cert-badge">BD</div>
-        <div class="cert-name">Big Data Hadoop</div>
+        <div class="cert-name">Big Data hadoop-hive-crime-analysis</div>
         <div class="cert-issuer">KVCH · Sep 2017</div>
         <a class="cert-link" href="https://www.kvch.in" target="_blank" rel="noopener">Program info ↗</a>
       </div>
@@ -1086,7 +1090,8 @@
     "9M+ USERS ANALYZED ACROSS MARKETING CHANNELS",
     "99.3% DETECTION RATE — IEEE CYBER-AI 2026",
     "93% CITATION QUALITY — RAG ASSISTANT",
-    "20% FASTER EXECUTIVE DECISION-MAKING"
+    "20% FASTER EXECUTIVE DECISION-MAKING",
+    "12 PUBLIC GITHUB REPOSITORIES"
   ];
   let i = 0;
   const el = document.getElementById('flap');
@@ -1132,7 +1137,7 @@
       btn.classList.add('active');
       const cat = btn.dataset.cat;
       panelCards.forEach(p => {
-        const show = cat === 'all' || p.dataset.cat === cat;
+        const show = cat === 'all' || p.dataset.cat.split(/\s+/).includes(cat);
         p.classList.toggle('is-hidden', !show);
       });
     });
